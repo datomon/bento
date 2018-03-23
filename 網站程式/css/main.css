@@ -1,0 +1,437 @@
+@charset "UTF-8";
+body{margin: 0;padding:0;background: #F5F5F5;font-family: "微軟正黑體", "新細明體"}
+
+/** font color **/
+.red{color:red;}
+.green{color:#007500;}
+.blue{color:#0072E3;}
+.lightblack{color:#5B5B5B;}
+
+.cls{clear:both;} /* clear float */
+
+/*** login page ***/
+.logdiv{
+    margin:10% auto 0;
+    width:340px;
+    padding:10px 30px 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    border-radius:6px;
+    background:rgba(255,255,255,.8);
+}
+.login-inputs{
+    padding: 10px;
+    border:1px solid #d0d0d0;
+    border-radius:6px;
+    text-align: center;
+}
+.login-inputs input[type=text], .login-inputs input[type=password] {
+    width: 70%;
+    height: 30px;
+    background: rgb(255,255,255);
+    border:1px solid #d0d0d0;
+    border-radius:6px;
+    padding-left: 10px;
+}
+.logbtn {text-align: right;}
+.logbtn > button{
+    background: #77FF00;
+    border:1px solid #00FF00;
+    border-radius:6px;
+    padding: 8px 14px 8px;
+    cursor: pointer;
+}
+.logbtn > button:hover{color:#FFF; background:#008800;border-color:#227700;}
+.log-error{color:red;text-align: center;display: none;}
+
+/*** loading cover ***/
+.blackcover{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.4);
+    font-size: 350px;
+    text-align: center;
+    text-shadow: 0 0 15px #FFF;
+    display: none;
+}
+.loading-icon{color:#FFF; margin-top: 100px;}
+
+/*** nav ***/
+#header{
+    width: 100%;
+    background: #488DD8;
+    box-shadow: 0 2px 15px #4F4F4F;
+    margin-bottom: 30px;
+    border-bottom:1px solid rgb(42, 117, 198);
+}
+#header-con {
+    color: #FFF;
+    margin: 0 auto;
+    width: 960px;
+    height: 50px;
+    line-height: 50px;
+    padding: 10px;
+}
+#header-con a,#header-con a:visited{
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-right: 30px;
+}
+#header-con img, #header-con a {float: left;}
+#header-con a:last-child{float: right;margin-right: 0;}
+.logo{cursor: pointer;}
+
+/*************** main contect *************/
+#container {
+    margin: 0 auto 20px;
+    width: 940px;
+    height: 800px;
+    padding: 10px 20px 15px;
+    background: #FFF;
+    box-shadow: 1px 1px 8px rgb(140, 140, 140);
+    border-radius:6px;
+    font-size: 1.2em;
+}
+.tfd-del {position: relative;top:-2px;left:2px;cursor: pointer;margin-right: 20px;}
+
+/*** 今日廠商 ***/
+#today-store {
+    border: 1px solid rgb(244, 210, 205);
+    margin-bottom: 20px;
+}
+#store-title {
+    background: rgb(244, 210, 205);
+    text-align: center;
+    color: rgb(197, 64, 53);
+    padding: 8px 0 8px;
+}
+#store-con {
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+.openmenu, .fcount{
+    padding: 6px 14px;
+    background: #C4E1FF;
+    color: #0072E3;
+    border: 1px solid #ACD6FF;
+    border-radius:6px;
+    cursor: pointer;
+    position: relative;
+    top: -4px;
+}
+.fcount {
+    background: #CEFFCE;
+    color: #007500;
+    border: 1px solid #93FF93;
+}
+.openmenu:hover, .fcount:hover {
+    top: -6px;
+    left: -2px;
+    box-shadow: 1px 1px 2px #7B7B7B;
+}
+
+/*** 換頁&選便當msg ***/
+.page-nav, .chosehelp {
+    background: rgb(179, 255, 179);
+	text-align: center;
+    height: 40px;
+    line-height: 40px;
+    padding: 10px 0 10px;
+    margin-bottom: 10px;
+    color: #007500;
+}
+.page-up, .page-down {cursor: pointer;}
+.chosehelp{background: #FFED97;color: #000000;}
+
+/*** 菜單顯示區 ***/
+#menus-con {
+    overflow: hidden;
+    position: relative;
+    height: 540px;
+} 
+#menus-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 轉場 */
+    transition: top 0.4s;
+    -moz-transition: top 0.4s; /* Firefox 4 */
+    -webkit-transition: top 0.4s; /* Safari 和 Chrome */
+    -o-transition: top 0.4s; /* Opera */
+    /* 轉場效果曲線 */
+    transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out; /* Firefox 4 */
+    -webkit-transition-timing-function: ease-in-out; /* Safari 和 Chrome */
+    -o-transition-timing-function: ease-in-out; /* Opera */
+}
+.menus-items {
+    width: 940px;
+    height: 539px;
+    position: relative;
+    border-bottom: 1px solid #AE0000;
+}
+.items-left {
+    position: absolute;
+    width: 220px;
+    top: 10px;
+    left: 0;
+    text-align: right;
+}
+.items-right {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    top: 2px;
+    left: 240px;
+    font-size: 16px;
+    overflow-y: auto;
+}
+
+/*** 菜單左半部內部 ***/
+.items-left > img {
+    width:218px;
+    border: 1px solid #AE57A4;
+    cursor: pointer;
+}
+.chosebtn, .foodok {
+    margin: 0 auto;
+    padding: 6px 12px;
+    border-radius:6px;
+    cursor: pointer;
+    background: #FFDAC8;
+    border: 1px solid #BB3D00;
+    color: #BB3D00;
+    font-size: 16px;
+}
+.chosebtn:hover{
+    background: #BB3D00;
+    color: #FFF;
+}
+.foodok {
+    background: #E2C2DE;
+    border: 1px solid #E2C2DE;
+    color: #AE57A4;
+}
+.foodok:hover{
+    background: #AE57A4;
+    color: #FFF;
+}
+.bigimg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    display: none;
+}
+#bigimg-con{margin: 70px auto 0;}
+#bigimg-con > img {
+    max-height: 800px;
+    max-width: 800px;
+}
+#imgoff{
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 4px #FFF;
+    cursor: pointer;
+}
+/*選擇店家、今日便當的訊息*/
+.chosemsg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.foods-msgcon{width:400px;}
+.chosestore-con{
+    position: relative;
+    margin: 250px auto 0;
+    width: 320px;
+    height: 120px;
+    padding: 10px 15px 10px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #FFF;
+    background: #FFF;
+}
+.chosestore-con > div {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 15px 0 25px;
+    border-bottom: 1px solid #ADADAD;
+}
+.chosestore-con > p {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+}
+.msg-ok, .msg-cancle{
+    padding: 6px 14px 6px;
+    height: 30px;
+    border-radius:6px;
+    cursor: pointer;
+}
+.msg-ok{
+    margin-right: 15px;
+    background: #00BB00;
+    border: 1px solid #00BB00;
+    color: #FFF;
+}
+.msg-ok:hover{background: #009100;}
+.msg-cancle{
+    border: 1px solid #272727;
+    color: #272727;
+    background: #FFF;
+}
+.msg-cancle:hover{color: red; border-color: red;}
+.ftotal-con {
+    position: relative;
+    width: 850px;
+    margin: 250px auto 0;
+    padding: 20px 15px 60px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #FFF;
+    background: #FFF;
+    top: -180px;
+}
+.ftotal-btn{
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    width: 850px;
+    padding: 10px 0 8px;
+    text-align: right;
+    border-top: 1px solid #ADADAD;
+}
+
+/*** 菜單右半部內容 ***/
+.items-right ul, .items-right li{margin:0; padding:0;}
+.items-right ul {list-style-type: none;}
+.items-right li {
+    width: 180px;
+    padding: 4px 10px 4px;
+    border: 1px solid rgb(99, 99, 99);
+    border-radius:6px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 8px;
+}
+#choosefoodform input {display: none;}
+#choosefoodform [type="checkbox"]:checked + label > li {background: #BBFFBB;}
+.fitems {cursor: pointer;}
+.fitems:hover {background: #FFED97;}
+
+/*********** copyright **********/
+#copyright {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/*********** 菜單管理 ***********/
+#menuscon {
+    margin: 0 auto 35px;
+    width: 940px;
+    padding: 10px 20px 15px;
+    background: #FFF;
+    border-radius:6px;
+    font-size: 1.2em;
+}
+#addform p > input {margin-right: 15px;}
+#addform input {
+    width: 200px;
+    height: 24px;
+    border: 1px solid #8E8E8E;
+    border-radius:6px;
+    position: relative;
+    top: -2px;
+    padding-left: 15px;
+}
+#addform button, .editpwd button {
+    padding: 6px 14px 6px;
+    border: 1px solid #00A600;
+    border-radius:6px;
+    background: #00A600;
+    position: relative;
+    top: -3px;
+    color: #FFF;
+    cursor: pointer;
+}
+#addform button:hover, .editpwd button:hover {background: #007500;}
+.menus-table {width:940px; border: 1px solid #5B5B5B; border-collapse: collapse;}
+.menus-table tr, .menus-table th, .menus-table td {border: 1px solid #5B5B5B;text-align: center;}
+.menus-table tr:nth-child(even) {background: #FFE6D9;}
+.menus-table td {padding: 4px;}
+.ftotal-table {width:850px;}
+.editbtn, .delbtn{cursor: pointer;}
+.storeedit-con {
+    width: 360px;
+    height: 180px;
+}
+.storeedit-con > div {line-height: 24px; padding: 0}
+#editform input {
+    width: 200px;
+    height: 24px;
+    border: 1px solid #8E8E8E;
+    border-radius:6px;
+    position: relative;
+    top: -2px;
+    padding-left: 15px;
+}
+#sphone-input{margin-left: 42px;}
+
+/************ 密碼修改 ***********/
+.pwdcon {text-align: center;}
+
+/************ 圖片編輯 ***********/
+#pic-con {
+    border: 1px solid #8E8E8E;
+    width: 938px;
+    height: 938px;
+    background: #F5F5F5;
+    position:relative;
+}
+#pic-con img {
+    margin:auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#filechoose input, #filechoose button {
+    position: relative;
+    top: -3px;
+}
+#filechoose button {
+    padding: 6px 14px 6px;
+    border: 1px solid #2894FF;
+    border-radius:6px;
+    background: #2894FF;
+    color: #FFF;
+    cursor: pointer;
+}
+#filechoose button:hover {background: #0066CC;}
+
+/******* 回頂點按鈕 *******/
+img.gotop{
+    display: none;
+    position: fixed;
+    bottom:1em;
+    right: 1em;
+    width: 3em;
+    height: 3em;
+    cursor: pointer;
+}
