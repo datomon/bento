@@ -1,8 +1,8 @@
 這是個練習用的專案，用NAS架訂便當的網站，請勿用於商業行為，感謝~!!
 
 <p>
-網路環境：內部區網
-主機：Synology DS213air
+網路環境：內部區網<br>
+主機：Synology DS213air<br>
 套件：Web Station、PHP 5.6、MariaDB 10、phpMyAdmin、DNS Server
 </p>
 
