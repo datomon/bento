@@ -25,7 +25,7 @@
 			</p>
 		</div>
 		<p class="log-error"><i class="fa fa-close fa-lg"></i> 帳號或密碼錯誤，請重新輸入!</p>
-		<p class="logbtn"><button type="button">
+		<p class="logbtnalgin"><button type="button" class="logbtn">
 			<i class="fa fa-check fa-lg"></i> 確定登入</button>
 		</p>
 	</div>
