@@ -32,15 +32,19 @@ body{margin: 0;padding:0;background: #F5F5F5;font-family: "微軟正黑體", "�
     border-radius:6px;
     padding-left: 10px;
 }
-.logbtn {text-align: right;}
-.logbtn > button{
+.login-inputs input[type=text]:focus, .login-inputs input[type=password]:focus {
+    outline: none;
+    box-shadow: 0 0 10px #66FFFF;
+}
+.logbtnalgin {text-align: right;}
+.logbtn{
     background: #77FF00;
     border:1px solid #00FF00;
     border-radius:6px;
     padding: 8px 14px 8px;
     cursor: pointer;
 }
-.logbtn > button:hover{color:#FFF; background:#008800;border-color:#227700;}
+.logbtn:hover{color:#FFF; background:#008800;border-color:#227700;}
 .log-error{color:red;text-align: center;display: none;}
 
 /*** loading cover ***/
