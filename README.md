@@ -7,3 +7,8 @@
 </p>
 
 <p>本專案不支援IE8以下瀏覽器，建議使用Chrome或Firefox!</p>
+
+<p>
+範例網站：http://bento.kaniss.net/</br>
+帳號用 01 到 50 之間其中一個，密碼皆為 1234
+</p>
