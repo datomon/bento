@@ -12,3 +12,8 @@
 範例網站：http://bento.kaniss.net/</br>
 帳號用 01 到 50 之間其中一個，密碼皆為 1234
 </p>
+
+<p>
+登入畫面的泡泡背景，如果喜歡的話可以至作者的Github獲得更多資訊：</br>
+https://github.com/tipsy/bubbly-bg  
+</p>
